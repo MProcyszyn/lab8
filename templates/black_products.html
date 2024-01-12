@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Main page</h1>
+    </header>
+
+	<main>
+		    <h1>Black Products</h1>
+    <ul>
+        {% for product in black_products %}
+            <li>{{ product.Name }} - {{ product.Color }}</li>
+        {% endfor %}
+    </ul>
+
+	</main>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address query</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Main page</h1>
+    </header>
+
+	<main>
+		    <h1>Address query</h1>
+    <ul>
+        {% for address in address %}
+            <li>{{ address.City }} - {{ address.StateProvince }} - {{ address.AddressLine1 }}</li>
+        {% endfor %}
+    </ul>
+
+	</main>
+</body>
+</html>
